@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-darkbg: #17181e;
+  --color-cardbg: #1f212a;
+}
+
+@layer base {
+  body {
+    @apply bg-darkbg text-slate-200 antialiased font-sans;
+  }
+}
