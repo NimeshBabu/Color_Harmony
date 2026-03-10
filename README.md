@@ -5,6 +5,11 @@ No signups, no external APIs, just instantly shareable palettes.
 
 ---
 
+# Live Demo
+
+[https://color-harmony-murex.vercel.app/](https://color-harmony-murex.vercel.app/)
+
+---
 ## 🔥 Features
 - **Dynamic Color Wheel:** Canvas-powered interactive color wheel for smooth visual color selection.
 - **HEX Input & Syncing:** Type any valid HEX code to instantly generate palettes, fully synced with your input.
