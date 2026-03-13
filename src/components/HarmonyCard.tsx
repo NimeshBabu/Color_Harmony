@@ -21,8 +21,8 @@ export default function HarmonyCard({ title, subtitle, colors }: HarmonyCardProp
                 <button
                     onClick={() => setShowInfo(!showInfo)}
                     className={`p-2 rounded-full transition-all duration-300 border backdrop-blur-sm ${showInfo
-                            ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30 rotate-12 scale-110'
-                            : 'bg-black/20 text-gray-400 border-white/5 hover:bg-white/10 hover:text-white'
+                        ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30 rotate-12 scale-110'
+                        : 'bg-black/20 text-gray-400 border-white/5 hover:bg-white/10 hover:text-white'
                         }`}
                     title={showInfo ? "Close notes" : "Notes & Information"}
                 >
@@ -31,9 +31,9 @@ export default function HarmonyCard({ title, subtitle, colors }: HarmonyCardProp
             </div>
 
             {/* Colors Container (Always present in DOM to hold space) */}
-            <div className={`flex gap-3 flex-1 transition-opacity duration-300 ${showInfo ? 'opacity-20 blur-sm pointer-events-none' : 'opacity-100'}`}>
+            <div className={`flex flex-wrap md:flex-nowrap gap-3 flex-1 transition-opacity duration-300 ${showInfo ? 'opacity-20 blur-sm pointer-events-none' : 'opacity-100'}`}>
                 {colors.map((c, i) => (
-                    <div key={i} className="flex-1 min-w-0">
+                    <div key={i} className="flex-1 min-w-[calc(50%-0.5rem)] sm:min-w-[100px] md:min-w-0">
                         <ColorSwatch color={c.hex} label={c.label} />
                     </div>
                 ))}
