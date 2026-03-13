@@ -238,7 +238,7 @@ export default function App() {
 
 
         {/* Harmony Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
 
           <HarmonyCard
             title="Complementary"
