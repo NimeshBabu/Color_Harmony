@@ -27,11 +27,10 @@ export default function HarmonyCard({ title, subtitle, colors }: HarmonyCardProp
 
         <button
           onClick={() => setShowInfo(!showInfo)}
-          className={`p-2 rounded-full transition-all duration-300 border backdrop-blur-sm ${
-            showInfo
+          className={`p-2 rounded-full transition-all duration-300 border backdrop-blur-sm ${showInfo
               ? "bg-indigo-500/20 text-indigo-300 border-indigo-500/30 rotate-12 scale-110"
               : "bg-black/20 text-gray-400 border-white/5 hover:bg-white/10 hover:text-white"
-          }`}
+            }`}
         >
           <Info size={18} />
         </button>
@@ -39,12 +38,8 @@ export default function HarmonyCard({ title, subtitle, colors }: HarmonyCardProp
 
       {/* Responsive Swatches */}
       <div
-        className={`grid gap-3 transition-opacity duration-300
-        grid-cols-2
-        sm:grid-cols-3
-        md:grid-cols-4
-        lg:grid-cols-5
-        ${showInfo ? "opacity-20 blur-sm pointer-events-none" : "opacity-100"}`}
+        className={`grid gap-3 transition-opacity duration-300 grid-cols-2 sm:grid-cols-3 md:[grid-template-columns:repeat(auto-fit,minmax(120px,1fr))] 
+          ${showInfo ? "opacity-20 blur-sm pointer-events-none" : "opacity-100"}`}
       >
         {colors.map((c, i) => (
           <ColorSwatch key={i} color={c.hex} label={c.label} />
@@ -53,11 +48,10 @@ export default function HarmonyCard({ title, subtitle, colors }: HarmonyCardProp
 
       {/* Information Overlay */}
       <div
-        className={`absolute left-0 right-0 bottom-0 top-[80px] p-6 bg-black/60 backdrop-blur-xl border-t border-white/10 flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-20 overflow-y-auto ${
-          showInfo
+        className={`absolute left-0 right-0 bottom-0 top-[80px] p-6 bg-black/60 backdrop-blur-xl border-t border-white/10 flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-20 overflow-y-auto ${showInfo
             ? "translate-y-0 opacity-100"
             : "translate-y-[110%] opacity-0 pointer-events-none"
-        }`}
+          }`}
       >
         <div className="text-sm text-gray-300 leading-relaxed mb-4 font-medium flex-shrink-0">
           <span className="text-indigo-300 font-bold">{title}</span> uses colors that are {subtitle.toLowerCase()} on the color wheel.
